@@ -11,7 +11,7 @@ variable "region" {
 }
 
 module "registry_droplet" {
-  source = "https://github.com/paxsonsa/terraform-digitalocean-multi-droplet"
+  source = "git@github.com:paxsonsa/terraform-digitalocean-multi-droplet.git"
   token = "${var.do_token}"
   count = 1
   prefix = "registry"
