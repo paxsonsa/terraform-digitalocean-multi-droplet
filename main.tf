@@ -7,5 +7,5 @@ resource "digitalocean_droplet" "instance" {
   name   = "${format("%s-%s-%02dv", var.prefix, var.region, count.index + 1)}"
   region = "${var.region}"
   size   = "${var.size}"
-  ssh_keys = "${list(var.ssh_keys)}"
+  ssh_keys = "${var.ssh_keys}"
 }
