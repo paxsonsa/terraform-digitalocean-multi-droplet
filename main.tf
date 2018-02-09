@@ -1,9 +1,5 @@
 # Terraform Module Config :: multi_instance
 # Copyright IndieEngine 2018
-provider "digitalocean" {
-  token = "${var.token}"
-}
-
 resource "digitalocean_droplet" "instance" {
   count  = "${var.count}"
   private_networking = true
