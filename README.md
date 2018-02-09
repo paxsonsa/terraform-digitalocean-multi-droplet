@@ -11,7 +11,7 @@ variable "region" {
 }
 
 provider "digitalocean" {
-  token = "xxxxxxxx"
+  token = "${var.do_token}"
 }
 
 module "registry_droplet" {
