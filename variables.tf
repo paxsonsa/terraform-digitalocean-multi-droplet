@@ -1,12 +1,6 @@
 # Terraform Module Config :: multi_instance variables
 # Copyright IndieEngine 2018
 
-# DO Token
-variable "token" {
-  description = "Digital Ocean API Token to use when creating tags"
-  type = "string"
-}
-
 # Instance Count
 variable "count" {
   description = "The number of instances to create"
