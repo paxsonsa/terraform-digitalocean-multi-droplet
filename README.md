@@ -10,9 +10,12 @@ variable "region" {
   default = "sfo2"
 }
 
+provider "digitalocean" {
+  token = "xxxxxxxx"
+}
+
 module "registry_droplet" {
   source = "git@github.com:paxsonsa/terraform-digitalocean-multi-droplet.git"
-  token = "${var.do_token}"
   count = 1
   prefix = "registry"
   size = "512mb"
